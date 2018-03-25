@@ -36,14 +36,14 @@ Paleta.prototype.ruch=function () {
 
     if(this.x<0)
     {
-        this.x=szerokosc;
+        this.x+=10;
 
     }
     else if(this.x>szerokosc)
     {
         this.x=0;
 
-    };
+    }
 
 };
 
@@ -81,7 +81,7 @@ var info={
 $("body").keydown(function(zdarzenie){
 
 
-    var kierunek=info[zdarzenie.keyCode];
+    let kierunek=info[zdarzenie.keyCode];
     chillybilly.kierunek(kierunek)
 });
 
@@ -150,7 +150,7 @@ Pilka.prototype.collision=function(){
 
 
 
-    for(var i=0;i<100;i++) {
+    for(let i=0;i<100;i++) {
 
         if ((this.y > 465) && (this.x === chillybilly.x + i))
         {
@@ -172,7 +172,6 @@ Pilka.prototype.collision=function(){
         scores=0;
         document.getElementById("scores").innerHTML=scores;
     }
-
 
 };
 
